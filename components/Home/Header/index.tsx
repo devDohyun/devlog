@@ -19,6 +19,7 @@ const HomeHeader = ({ routes }: HomeHeaderProps) => {
       <a href="https://github.com/devDohyun" target="_blank" rel="noreferrer">
         <StyledRouteItem>github</StyledRouteItem>
       </a>
+      <StyledRouteItem>es7@kakao.com</StyledRouteItem>
     </StyledContainer>
   )
 }

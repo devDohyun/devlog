@@ -15,13 +15,13 @@ export const StyledMemojiWrapper = styled.div`
 `
 
 export const StyledSection = styled.div`
-  margin: 100px 0;
+  margin: 150px 0;
 
   text-align: center;
 `
 
 export const StyledSectionTitle = styled.div`
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 
   font-size: 24px;
   font-weight: bold;
