@@ -4,6 +4,8 @@ export const StyledTitle = styled.div`
   font-size: 64px;
   font-weight: bold;
   text-align: center;
+
+  line-height: 1.2;
 `
 
 export const StyledMemojiWrapper = styled.div`
@@ -28,4 +30,14 @@ export const StyledSectionTitle = styled.div`
 export const StyledSectionBody = styled.div`
   font-size: 18px;
   font-weight: regular;
+
+  line-height: 1.35;
+  word-break: keep-all;
+`
+
+export const StyledStackList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 `
