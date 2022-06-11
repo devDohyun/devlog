@@ -1,9 +1,5 @@
+import { StyledTextBlockProps } from '@/components/common/TextBlock/@types'
 import styled from '@emotion/styled'
-
-type StyledTextBlockProps = {
-  color?: string
-  backgroundColor?: string
-}
 
 export const StyledTextBlock = styled.div`
   display: inline-block;
