@@ -9,7 +9,7 @@ const Home = () => {
     return [
       {
         text: 'LOGS',
-        href: '/devlog',
+        href: '/posts',
       },
       {
         text: 'PROFILE',
