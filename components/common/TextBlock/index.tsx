@@ -18,6 +18,34 @@ const presetMapped: IPresetMapped = {
     color: '#000000',
     backgroundColor: '#ecdb54',
   },
+  next: {
+    color: '#000000',
+    backgroundColor: '#ffffff',
+  },
+  nuxt: {
+    color: '#ffffff',
+    backgroundColor: '#00dc82',
+  },
+  react: {
+    color: '#61dafb',
+    backgroundColor: '#282c34',
+  },
+  vue: {
+    color: '#64b688',
+    backgroundColor: '#39485c',
+  },
+  git: {
+    color: '#ffffff',
+    backgroundColor: '#dd4132',
+  },
+  scss: {
+    color: '#ffffff',
+    backgroundColor: '#bb6a94',
+  },
+  node: {
+    color: '#ffffff',
+    backgroundColor: '#025e00',
+  },
 }
 
 const TextBlock = ({ children, preset, color, backgroundColor }: TextBlockProps) => {
