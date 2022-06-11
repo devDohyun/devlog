@@ -14,4 +14,13 @@ export const StyledRouteItem = styled.div`
 
   background-color: #ffffff;
   color: #000000;
+
+  border: 2px solid transparent;
+
+  &:hover {
+    background-color: transparent;
+    color: #ffffff;
+
+    border-color: #ffffff;
+  }
 `
