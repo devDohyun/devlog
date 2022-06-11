@@ -7,7 +7,7 @@ export const StyledContainer = styled.div`
 `
 
 export const StyledRouteItem = styled.div`
-  padding: 5px 10px;
+  padding: 5px 50px;
 
   font-size: 18px;
   font-weight: bold;
