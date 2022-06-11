@@ -15,7 +15,7 @@ const PagePosts: NextPage = ({ posts }: PagePostsProps) => {
 export default PagePosts
 
 export async function getStaticProps() {
-  const files = await fs.readdirSync(path.join('posts'))
+  const files = fs.readdirSync(path.join('posts'))
 
   const posts = files.map((filename) => {
     const slug = filename.replace('.md', '')
