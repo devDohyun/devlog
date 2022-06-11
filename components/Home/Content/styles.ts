@@ -24,3 +24,8 @@ export const StyledSectionTitle = styled.div`
   font-size: 24px;
   font-weight: bold;
 `
+
+export const StyledSectionBody = styled.div`
+  font-size: 18px;
+  font-weight: regular;
+`
