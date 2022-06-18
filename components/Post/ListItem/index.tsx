@@ -1,4 +1,5 @@
-import { StyledPostListItem, StyledPostTitle } from '@/components/Post/ListItem/styles'
+import TextBlock from '@/components/common/TextBlock'
+import { StyledPostDetailContainer, StyledPostExcerpt, StyledPostListItem, StyledPostMetaContainer, StyledPostTitle } from '@/components/Post/ListItem/styles'
 import { PostItem } from '@/types'
 
 type PostListItemProps = {
@@ -8,7 +9,14 @@ type PostListItemProps = {
 const PostListItem = ({ item }: PostListItemProps) => {
   return (
     <StyledPostListItem>
-      <StyledPostTitle>{item.body.title}</StyledPostTitle>
+      <StyledPostDetailContainer>
+        <StyledPostTitle>{item.body.title}</StyledPostTitle>
+        <StyledPostExcerpt>{item.body.excerpt}</StyledPostExcerpt>
+      </StyledPostDetailContainer>
+      <StyledPostMetaContainer>
+        {item.body.date}
+        <TextBlock backgroundColor="#3178c6">Typescript</TextBlock>
+      </StyledPostMetaContainer>
     </StyledPostListItem>
   )
 }
