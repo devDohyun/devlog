@@ -1,18 +1,32 @@
 import path from 'path'
 import fs from 'fs'
 import matter from 'gray-matter'
-import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { ParsedUrlQuery } from 'querystring'
+import React, { ReactNode } from 'react'
+import DefaultLayout from '@/components/layouts/default'
+import { NextPageWithLayout } from '@/pages/_app'
+import PostDetail from '@/components/Post/Detail'
 
 interface IParams extends ParsedUrlQuery {
   slug: string
 }
 
-const PagePostDetail: NextPage = ({ metadata, slug, content }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  return <>{JSON.stringify({ metadata, slug, content })}</>
+const PagePostDetail: NextPageWithLayout = ({ metadata, slug, content }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  return (
+    <>
+      <PostDetail metadata={metadata} content={content} />
+    </>
+  )
 }
 
 export default PagePostDetail
+
+PagePostDetail.getLayout = (page: ReactNode) => {
+  const title = React.isValidElement(page) ? page.props.metadata.title : ''
+
+  return <DefaultLayout title={title}>{page}</DefaultLayout>
+}
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const files = fs.readdirSync(path.join('posts'))
