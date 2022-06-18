@@ -49,17 +49,18 @@ const presetMapped: IPresetMapped = {
   },
 }
 
-const TextBlock = ({ children, preset, color, backgroundColor }: TextBlockProps) => {
+const TextBlock = ({ children, preset, color, backgroundColor, fontSize }: TextBlockProps) => {
   const textBlockProps = useMemo(() => {
     let result: StyledTextBlockProps = {
       color,
       backgroundColor,
+      fontSize,
     }
 
     if (preset && presetMapped[preset]) result = presetMapped[preset]
 
     return result
-  }, [preset, color, backgroundColor])
+  }, [preset, color, backgroundColor, fontSize])
 
   return <StyledTextBlock {...textBlockProps}>{children}</StyledTextBlock>
 }
