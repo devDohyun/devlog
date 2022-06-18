@@ -5,11 +5,15 @@ import matter from 'gray-matter'
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
 import Post from '@/components/Post'
 import { PostItem } from '@/types'
+import { useRouter } from 'next/router'
 
 const PagePosts: NextPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const router = useRouter()
+  const query = router.query.q as string
+
   return (
     <>
-      <Post items={posts} />
+      <Post items={posts} query={query} />
     </>
   )
 }
