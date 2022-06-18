@@ -1,6 +1,9 @@
 import styled from '@emotion/styled'
 
 export const StyledContentContainer = styled.div`
+  position: sticky;
+  top: 50px;
+
   width: 100%;
 `
 
