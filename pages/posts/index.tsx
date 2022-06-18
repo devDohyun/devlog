@@ -22,11 +22,11 @@ export const getStaticProps: GetStaticProps = async () => {
   const posts = files.map((filename) => {
     const slug = filename.replace('.md', '')
     const markdownWithMeta = fs.readFileSync(path.join('posts', filename), 'utf-8')
-    const { data: body } = matter(markdownWithMeta)
+    const { data: metadata } = matter(markdownWithMeta)
 
     return {
       slug,
-      body,
+      metadata,
     }
   }) as PostItem[]
 

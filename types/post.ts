@@ -1,4 +1,4 @@
-export type PostItemBody = {
+export type PostItemMetadata = {
   title: string
   date: string
   excerpt: string
@@ -7,5 +7,5 @@ export type PostItemBody = {
 
 export type PostItem = {
   slug: string
-  body: PostItemBody
+  metadata: PostItemMetadata
 }

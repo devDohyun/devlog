@@ -10,11 +10,11 @@ const PostListItem = ({ item }: PostListItemProps) => {
   return (
     <StyledPostListItem>
       <StyledPostDetailContainer>
-        <StyledPostTitle>{item.body.title}</StyledPostTitle>
-        <StyledPostExcerpt>{item.body.excerpt}</StyledPostExcerpt>
+        <StyledPostTitle>{item.metadata.title}</StyledPostTitle>
+        <StyledPostExcerpt>{item.metadata.excerpt}</StyledPostExcerpt>
       </StyledPostDetailContainer>
       <StyledPostMetaContainer>
-        {item.body.date}
+        {item.metadata.date}
         <TextBlock backgroundColor="#3178c6">Typescript</TextBlock>
       </StyledPostMetaContainer>
     </StyledPostListItem>
