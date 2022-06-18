@@ -2,7 +2,7 @@ export type PostItemBody = {
   title: string
   date: string
   excerpt: string
-  cover_image: string
+  tag: string
 }
 
 export type PostItem = {
