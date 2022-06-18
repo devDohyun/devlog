@@ -8,4 +8,5 @@ export type PostItemMetadata = {
 export type PostItem = {
   slug: string
   metadata: PostItemMetadata
+  content?: string
 }
