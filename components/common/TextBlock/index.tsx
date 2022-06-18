@@ -7,6 +7,7 @@ type TextBlockProps = {
   preset?: string
   color?: string
   backgroundColor?: string
+  fontSize?: string
 }
 
 interface IPresetMapped {

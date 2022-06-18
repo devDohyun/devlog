@@ -6,7 +6,7 @@ export const StyledTextBlock = styled.div`
 
   padding: 10px 15px;
 
-  font-size: 24px;
+  font-size: ${(props: StyledTextBlockProps) => props.fontSize || '24px'};
   font-weight: bold;
 
   color: ${(props: StyledTextBlockProps) => props.color || '#ffffff'};
