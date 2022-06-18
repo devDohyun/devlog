@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 export const StyledPostDetailContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: top;
+  align-items: flex-start;
 
   width: 100%;
 
