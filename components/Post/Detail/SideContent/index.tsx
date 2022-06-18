@@ -1,4 +1,4 @@
-import { StyledBlogTitle, StyledContentContainer } from '@/components/Post/SideContent/styles'
+import { StyledBlogTitle, StyledContentContainer } from '@/components/Post/Detail/SideContent/styles'
 import Image from 'next/image'
 import Link from 'next/link'
 
