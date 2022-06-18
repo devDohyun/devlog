@@ -6,15 +6,14 @@ export const StyledPostDetailContainer = styled.div`
   align-items: flex-start;
 
   width: 100%;
+  max-width: 1200px;
 
+  margin: 0 auto;
   padding: 50px;
 `
 
 export const StyledPostContentContainer = styled.div`
   flex-grow: 1;
-
-  min-width: 0;
-  max-width: 900px;
 `
 export const StyledPostContentTitle = styled.span`
   padding: 0 20px;
