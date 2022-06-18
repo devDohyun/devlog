@@ -8,7 +8,7 @@ import DefaultLayout from '@/components/layouts/default'
 import { NextPageWithLayout } from '@/pages/_app'
 import PostDetail from '@/components/Post/Detail'
 
-interface IParams extends ParsedUrlQuery {
+interface IQueryParams extends ParsedUrlQuery {
   slug: string
 }
 
@@ -43,7 +43,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const { slug } = context.params as IParams
+  const { slug } = context.params as IQueryParams
 
   const markdownWithMeta = fs.readFileSync(path.join('posts', `${slug}.md`), 'utf-8')
 
