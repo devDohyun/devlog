@@ -3,14 +3,15 @@ import React from 'react'
 import { StyledLayout } from './styles'
 
 type LayoutProps = {
+  title?: string
   children: React.ReactNode
 }
 
-const DefaultLayout = ({ children }: LayoutProps) => {
+const DefaultLayout = ({ children, title }: LayoutProps) => {
   return (
     <>
       <Head>
-        <title>Dohyun&apos;s dev log</title>
+        <title>{title || `Dohyun's dev log`}</title>
       </Head>
       <StyledLayout>{children}</StyledLayout>
     </>
