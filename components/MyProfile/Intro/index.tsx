@@ -1,4 +1,4 @@
-import { StyledIntroTitle, StyledTableOfContent, StyledTableOfContentItem } from '@/components/MyProfile/Intro/styles'
+import { StyledIntroTitle, StyledTableOfContents, StyledTableOfContentsItem } from '@/components/MyProfile/Intro/styles'
 import { getKoreanAge, getMonthsBetweenNowAndDate } from '@/core/common'
 
 const MyProfileIntro = () => {
@@ -11,14 +11,14 @@ const MyProfileIntro = () => {
         <br />
         {getKoreanAge(1999)}세.
       </StyledIntroTitle>
-      <StyledTableOfContent>
-        <StyledTableOfContentItem>경력사항</StyledTableOfContentItem>
-        <StyledTableOfContentItem>프로젝트</StyledTableOfContentItem>
-        <StyledTableOfContentItem>주요기술</StyledTableOfContentItem>
-        <StyledTableOfContentItem>학력</StyledTableOfContentItem>
-        <StyledTableOfContentItem>자격증</StyledTableOfContentItem>
-        <StyledTableOfContentItem>연락처</StyledTableOfContentItem>
-      </StyledTableOfContent>
+      <StyledTableOfContents>
+        <StyledTableOfContentsItem>경력사항</StyledTableOfContentsItem>
+        <StyledTableOfContentsItem>프로젝트</StyledTableOfContentsItem>
+        <StyledTableOfContentsItem>주요기술</StyledTableOfContentsItem>
+        <StyledTableOfContentsItem>학력</StyledTableOfContentsItem>
+        <StyledTableOfContentsItem>자격증</StyledTableOfContentsItem>
+        <StyledTableOfContentsItem>연락처</StyledTableOfContentsItem>
+      </StyledTableOfContents>
     </>
   )
 }

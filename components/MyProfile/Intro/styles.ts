@@ -1,17 +1,17 @@
 import styled from '@emotion/styled'
 
 export const StyledIntroTitle = styled.div`
-  font-size: 64px;
+  font-size: 96px;
   font-weight: bold;
 `
 
-export const StyledTableOfContent = styled.ol`
+export const StyledTableOfContents = styled.ol`
   margin-top: 150px;
   padding-left: 0;
 
   list-style-position: inside;
 `
-export const StyledTableOfContentItem = styled.li`
+export const StyledTableOfContentsItem = styled.li`
   margin-bottom: 7.5px;
 
   font-size: 24px;
