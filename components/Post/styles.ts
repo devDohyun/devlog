@@ -5,6 +5,20 @@ export const StyledHeader = styled.div`
   text-align: center;
 `
 
+export const StyledSearchInputWrapper = styled.div`
+  margin: 25px auto;
+`
+export const StyledSearchInput = styled.input`
+  padding: 5px 10px;
+
+  font-size: 18px;
+
+  background-color: #ffffff;
+  border: none;
+
+  color: #000000;
+`
+
 export const StyledMainLink = styled.a`
   font-size: 18px;
 

@@ -11,6 +11,8 @@ const PagePosts: NextPage = ({ posts }: InferGetStaticPropsType<typeof getStatic
   const router = useRouter()
   const query = router.query.q as string
 
+  if (!router.isReady) return null
+
   return (
     <>
       <Post items={posts} query={query} />

@@ -1,8 +1,8 @@
 import PostListItem from '@/components/Post/ListItem'
-import { StyledHeader, StyledListContainer, StyledListRow, StyledMainLink } from '@/components/Post/styles'
+import { StyledHeader, StyledListContainer, StyledListRow, StyledMainLink, StyledSearchInput, StyledSearchInputWrapper } from '@/components/Post/styles'
 import { PostItem } from '@/types'
 import Link from 'next/link'
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 
 type PostProps = {
   items: PostItem[]
@@ -10,13 +10,19 @@ type PostProps = {
 }
 
 const Post = ({ items, query }: PostProps) => {
-  const filteredItems = useMemo(() => {
-    if (!query) return items
+  const [queryValue, setQueryValue] = useState<string>(query || '')
 
-    const keyword = query.toLowerCase()
+  const filteredItems = useMemo(() => {
+    if (!queryValue) return items
+
+    const keyword = queryValue.toLowerCase()
 
     return items.filter((item) => [item.metadata.title.toLowerCase(), item.metadata.tag.toLowerCase()].some((boundary) => boundary.includes(keyword)))
-  }, [items, query])
+  }, [items, queryValue])
+
+  const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setQueryValue(e.target.value)
+  }
 
   return (
     <>
@@ -24,6 +30,9 @@ const Post = ({ items, query }: PostProps) => {
         <Link href="/">
           <StyledMainLink>🏠 메인으로 돌아가기</StyledMainLink>
         </Link>
+        <StyledSearchInputWrapper>
+          <StyledSearchInput onChange={onInputChange} type="text" placeholder="검색어 입력" />
+        </StyledSearchInputWrapper>
       </StyledHeader>
       <StyledListContainer>
         {filteredItems.map((item) => (

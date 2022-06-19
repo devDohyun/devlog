@@ -57,7 +57,7 @@ const PostSideContent = () => {
       <div>
         <StyledViewStackItem>관련 글 더보기</StyledViewStackItem>
         {stacks.map((stack) => (
-          <Link key={stack.text} href={{ pathname: `/posts`, query: { q: stack.text } }} shallow>
+          <Link key={stack.text} href={{ pathname: `/posts`, query: { q: stack.text } }}>
             <a>
               <StyledStackItem>
                 <TextBlock preset={stack.preset} color={stack.color} backgroundColor={stack.backgroundColor}>
