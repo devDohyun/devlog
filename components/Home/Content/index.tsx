@@ -3,6 +3,7 @@ import { StyledMemojiWrapper, StyledSection, StyledSectionBody, StyledSectionTit
 import Image from 'next/image'
 
 import { myStacks } from '@/core/constant'
+import { getKoreanAge } from '@/core/common'
 
 const HomeContent = () => {
   return (
@@ -17,7 +18,7 @@ const HomeContent = () => {
       </StyledTitle>
 
       <StyledSection>
-        <StyledSectionTitle>코드 한 땀 한 땀 정성들여 작성하는, 24세 FrontEnd 개발자.</StyledSectionTitle>
+        <StyledSectionTitle>코드 한 땀 한 땀 정성들여 작성하는, {getKoreanAge(1999)}세 FrontEnd 개발자.</StyledSectionTitle>
         <StyledSectionBody>
           특성화 고등학교 재학 중 취업하여, 현재까지 개발자로서의 커리어를 이어오고 있습니다.
           <br />
