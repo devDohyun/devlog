@@ -21,6 +21,7 @@ export const StyledPostContentTitle = styled.span`
   font-size: 64px;
   font-weight: bold;
 
+  word-break: keep-all;
   text-align: center;
   line-height: 1.5;
 
