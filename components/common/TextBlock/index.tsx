@@ -47,6 +47,18 @@ const presetMapped: IPresetMapped = {
     color: '#ffffff',
     backgroundColor: '#025e00',
   },
+  typescript: {
+    color: '#ffffff',
+    backgroundColor: '#3178c6',
+  },
+  vuetify: {
+    color: '#ffffff',
+    backgroundColor: '#2196f3',
+  },
+  sql: {
+    color: '#99abee',
+    backgroundColor: '#23305c',
+  },
 }
 
 const TextBlock = ({ children, preset, color, backgroundColor, fontSize }: TextBlockProps) => {
