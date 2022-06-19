@@ -57,7 +57,7 @@ const TextBlock = ({ children, preset, color, backgroundColor, fontSize }: TextB
       fontSize,
     }
 
-    if (preset && presetMapped[preset]) result = presetMapped[preset]
+    if (preset && presetMapped[preset]) result = { ...result, ...presetMapped[preset] }
 
     return result
   }, [preset, color, backgroundColor, fontSize])
