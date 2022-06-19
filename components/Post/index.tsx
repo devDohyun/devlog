@@ -31,7 +31,7 @@ const Post = ({ items, query }: PostProps) => {
           <StyledMainLink>🏠 메인으로 돌아가기</StyledMainLink>
         </Link>
         <StyledSearchInputWrapper>
-          <StyledSearchInput onChange={onInputChange} type="text" placeholder="검색어 입력" />
+          <StyledSearchInput onChange={onInputChange} value={queryValue} type="text" placeholder="검색어 입력" />
         </StyledSearchInputWrapper>
       </StyledHeader>
       <StyledListContainer>
