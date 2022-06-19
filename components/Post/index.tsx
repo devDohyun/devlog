@@ -1,5 +1,5 @@
 import PostListItem from '@/components/Post/ListItem'
-import { StyledHeader, StyledListContainer, StyledListRow, StyledMainLink, StyledSearchInput, StyledSearchInputWrapper } from '@/components/Post/styles'
+import { StyledHeader, StyledListContainer, StyledListNoData, StyledListRow, StyledMainLink, StyledSearchInput, StyledSearchInputWrapper } from '@/components/Post/styles'
 import { PostItem } from '@/types'
 import Link from 'next/link'
 import { useMemo, useState } from 'react'
@@ -34,15 +34,17 @@ const Post = ({ items, query }: PostProps) => {
           <StyledSearchInput onChange={onInputChange} value={queryValue} type="text" placeholder="검색어 입력" />
         </StyledSearchInputWrapper>
       </StyledHeader>
-      <StyledListContainer>
-        {filteredItems.map((item) => (
-          <Link key={item.slug} href={`/posts/${item.slug}`}>
-            <StyledListRow>
-              <PostListItem item={item}></PostListItem>
-            </StyledListRow>
-          </Link>
-        ))}
-      </StyledListContainer>
+      {(filteredItems.length > 0 && (
+        <StyledListContainer>
+          {filteredItems.map((item) => (
+            <Link key={item.slug} href={`/posts/${item.slug}`}>
+              <StyledListRow>
+                <PostListItem item={item}></PostListItem>
+              </StyledListRow>
+            </Link>
+          ))}
+        </StyledListContainer>
+      )) || <StyledListNoData>No data.</StyledListNoData>}
     </>
   )
 }

@@ -37,3 +37,7 @@ export const StyledListRow = styled.div`
 
   cursor: pointer;
 `
+
+export const StyledListNoData = styled.div`
+  text-align: center;
+`
