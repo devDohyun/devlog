@@ -15,7 +15,7 @@ const PostListItem = ({ item }: PostListItemProps) => {
       </StyledPostDetailContainer>
       <StyledPostMetaContainer>
         {item.metadata.date}
-        <TextBlock backgroundColor="#3178c6">Typescript</TextBlock>
+        <TextBlock preset={item.metadata.tag}>{item.metadata.tag}</TextBlock>
       </StyledPostMetaContainer>
     </StyledPostListItem>
   )
