@@ -6,12 +6,16 @@ import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
 import Post from '@/components/Post'
 import { PostItem } from '@/types'
 import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
 
 const PagePosts: NextPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const [mounted, setMounted] = useState<boolean>(false)
+  useEffect(() => setMounted(true), [])
+
   const router = useRouter()
   const query = router.query.q as string
 
-  if (!router.isReady) return null
+  if (!mounted) return null
 
   return (
     <>
