@@ -1,50 +1,10 @@
 import TextBlock from '@/components/common/TextBlock'
 import { StyledMemojiWrapper, StyledSection, StyledSectionBody, StyledSectionTitle, StyledStackList, StyledTitle } from '@/components/Home/Content/styles'
 import Image from 'next/image'
-import { useMemo } from 'react'
+
+import { myStacks } from '@/core/constant'
 
 const HomeContent = () => {
-  const stacks = useMemo(
-    () => [
-      {
-        preset: 'javascript',
-        text: 'Javascript',
-      },
-      { text: 'Typescript', backgroundColor: '#3178c6' },
-      {
-        preset: 'next',
-        text: 'Next.js',
-      },
-      {
-        preset: 'nuxt',
-        text: 'Nuxt',
-      },
-      {
-        preset: 'react',
-        text: 'React',
-      },
-      {
-        preset: 'vue',
-        text: 'Vue.js',
-      },
-      {
-        preset: 'git',
-        text: 'git',
-      },
-      {
-        preset: 'scss',
-        text: 'SCSS',
-      },
-      {
-        preset: 'node',
-        text: 'Node.js',
-      },
-      { text: 'Vuetify', backgroundColor: '#2196f3' },
-      { text: 'SQL', color: '#99abee', backgroundColor: '#23305c' },
-    ],
-    []
-  )
-
   return (
     <>
       <StyledMemojiWrapper>
@@ -68,8 +28,8 @@ const HomeContent = () => {
       <StyledSection>
         <StyledSectionTitle>주로 사용하는 기술스택</StyledSectionTitle>
         <StyledStackList>
-          {stacks.map((stack) => (
-            <TextBlock key={stack.text} preset={stack.preset} color={stack.color} backgroundColor={stack.backgroundColor}>
+          {myStacks.map((stack) => (
+            <TextBlock key={stack.text} preset={stack.id}>
               {stack.text}
             </TextBlock>
           ))}
