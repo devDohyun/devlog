@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const MyProfile = () => {
   return (
-    <StyledContainer>
+    <>
       <StyledHeader>
         <Link href="/">
           <a>
@@ -12,8 +12,10 @@ const MyProfile = () => {
           </a>
         </Link>
       </StyledHeader>
-      <MyProfileIntro />
-    </StyledContainer>
+      <StyledContainer>
+        <MyProfileIntro />
+      </StyledContainer>
+    </>
   )
 }
 
