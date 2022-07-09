@@ -1,9 +1,17 @@
-import { StyledIntroTitle, StyledTableOfContents, StyledTableOfContentsItem } from '@/components/MyProfile/Intro/styles'
+import { StyledContainer, StyledHeader, StyledIntroTitle, StyledMainLinkText, StyledTableOfContents, StyledTableOfContentsItem } from '@/components/MyProfile/Intro/styles'
 import { getKoreanAge, getMonthsBetweenNowAndDate } from '@/core/common'
+import Link from 'next/link'
 
 const MyProfileIntro = () => {
   return (
-    <>
+    <StyledContainer>
+      <StyledHeader>
+        <Link href="/">
+          <a>
+            <StyledMainLinkText>메인으로 돌아가기</StyledMainLinkText>
+          </a>
+        </Link>
+      </StyledHeader>
       <StyledIntroTitle>
         FrontEnd 개발자,
         <br />
@@ -19,7 +27,7 @@ const MyProfileIntro = () => {
         <StyledTableOfContentsItem>자격증</StyledTableOfContentsItem>
         <StyledTableOfContentsItem>연락처</StyledTableOfContentsItem>
       </StyledTableOfContents>
-    </>
+    </StyledContainer>
   )
 }
 
